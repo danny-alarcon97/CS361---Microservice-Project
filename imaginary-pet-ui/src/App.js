@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import PetInformation from "./components/PetInformation";
+// import RandomStatsGenerator from "./components/RandomStatsGenerator";
+// import PetGrowthManager from "./components/PetGrowthManager";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <PetInformation
+        pet={{
+          name: "Fluffy",
+          species: "Cat",
+          strength: 80,
+          speed: 60,
+          intelligence: 90,
+          dexterity: 70,
+        }}
+      />
+
+      <RandomStatsGenerator />
+      <PetGrowthManager /> */}
     </div>
   );
 }
