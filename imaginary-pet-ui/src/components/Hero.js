@@ -4,9 +4,11 @@ import React from "react";
 function Hero() {
   return (
     <section className="section-hero">
-      <h1 className="heading-primary">
-        Welcome to the heart and soul of our Pet Creator Project!
-      </h1>
+      <div className="hero-title">
+        <h1 className="heading-primary">
+          Welcome to the heart and soul of our Pet Creator Project!
+        </h1>
+      </div>
       <div className="hero">
         <div className="hero-img-box">
           <img
@@ -30,8 +32,8 @@ function Hero() {
           <a href="#how" className="btn btn--outline">
             Learn More &darr;
           </a>
-          <div className="user-population">
-            <p className="user-text">
+          <div className="exclamation">
+            <p className="claim-text">
               <span>Unleash Your Imagination</span> with Imaginary Pet Creator –
               Where Pixels Become Companions.
             </p>

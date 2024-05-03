@@ -5,9 +5,7 @@ function HowItWorks() {
     <section class="section-how" id="how">
       <div class="container">
         <span class="subheading">How it works</span>
-        <h2 class="heading-secondary">
-          Keeping track of your kitchen in 3 simple steps
-        </h2>
+        <h2 class="heading-secondary">IPet Tutorial</h2>
       </div>
 
       <div class="container grid grid--2-cols grid--center-v">
