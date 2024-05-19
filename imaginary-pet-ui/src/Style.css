@@ -166,3 +166,29 @@
   font-size: 1.8rem;
   line-height: 1.8;
 }
+
+/**************************/
+/* CREATE PET PAGE */
+/**************************/
+
+.item-table {
+  width: 100%;
+}
+
+.item-table th,
+.item-table td {
+  padding: 10px;
+}
+
+.item-table input,
+.item-table select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.item-table button {
+  padding: 10px;
+  cursor: pointer;
+}

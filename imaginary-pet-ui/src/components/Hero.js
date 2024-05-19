@@ -37,6 +37,9 @@ function Hero() {
               <span>Unleash Your Imagination</span> with Imaginary Pet Creator –
               Where Pixels Become Companions.
             </p>
+            <p className="claim-text">
+              The Tutorial below takes about 5 minutes to read!
+            </p>
           </div>
         </div>
       </div>

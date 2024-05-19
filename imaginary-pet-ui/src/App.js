@@ -8,9 +8,8 @@ import "./Queries.css";
 
 import Home from "./pages/Home";
 
-// import PetInformation from "./components/PetInformation";
-// import RandomStatsGenerator from "./components/RandomStatsGenerator";
-// import PetGrowthManager from "./components/PetGrowthManager";
+import AddPet from "./pages/AddPet";
+import PetsPage from "./pages/PetsPage";
 
 function App() {
   return (
@@ -19,9 +18,18 @@ function App() {
         <header>
           <Navbar />
         </header>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+
+        <main>
+          <section>
+            <Routes>
+              <Route path="/" element={<Home />} />
+
+              <Route path="/pets" element={<PetsPage />} />
+
+              <Route path="/create" element={<AddPet />} />
+            </Routes>
+          </section>
+        </main>
       </BrowserRouter>
     </>
   );

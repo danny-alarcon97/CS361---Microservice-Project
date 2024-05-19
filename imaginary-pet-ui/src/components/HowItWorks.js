@@ -18,15 +18,17 @@ function HowItWorks() {
           <p class="step-number" style={{ color: "firebrick" }}>
             01 <GiSmallFire />
           </p>
-          <h3 class="heading-tertiary">Create A Pet</h3>
+          <h3 class="heading-tertiary">
+            Create A Pet <strong>(IN PROGRESS!)</strong>
+          </h3>
           <p className="step-description">
             Create a pet in the{" "}
             <strong>
-              <a href="/pet">PET</a>
+              <a href="/create">CREATE</a>
             </strong>{" "}
-            tab in the Nav bar above, or click on the word PET! You will be able
-            to choose its name, species, and appearance. You can choose from 4
-            different elements that your pet can originate from:{" "}
+            tab in the Nav bar above, or click on the word create! You will be
+            able to choose its name, species, and appearance. You can choose
+            from 4 different elements that your pet can originate from:{" "}
             <strong>
               <span style={{ color: "firebrick" }}>fire</span>,
               <span style={{ color: "royalblue" }}> water</span>,
@@ -36,7 +38,8 @@ function HowItWorks() {
             <strong>
               <span style={{ color: "sienna" }}> earth</span>
             </strong>
-            !
+            ! If pets have already been created, you can also route to the
+            create page from the pet page.
           </p>
         </div>
 
@@ -45,7 +48,9 @@ function HowItWorks() {
           <p class="step-number" style={{ color: "royalblue" }}>
             02 <GiWaterSplash />
           </p>
-          <h3 class="heading-tertiary">Get Those Stats</h3>
+          <h3 class="heading-tertiary">
+            Get Those Stats <strong>(IN PROGRESS!)</strong>
+          </h3>
           <p class="step-description">
             Once your pet has been created, random stats will be granted to
             them. These stats include:{" "}
@@ -106,7 +111,8 @@ function HowItWorks() {
             03 <GiWhirlwind />
           </p>
           <h3 class="heading-tertiary">
-            Put Them To The Test Or Just Care For Them!
+            Put Them To The Test Or Just Care For Them!{" "}
+            <strong>(IN PROGRESS!)</strong>
           </h3>
           <p class="step-description">
             Test your pet's abilities by engaging in various challenges and
@@ -125,7 +131,8 @@ function HowItWorks() {
             04 <GiStoneSphere />
           </p>
           <h3 class="heading-tertiary">
-            Have Fun And Create All The Pets You Want!
+            Have Fun And Create All The Pets You Want!{" "}
+            <strong>(IN PROGRESS!)</strong>
           </h3>
           <p class="step-description">
             Have fun creating as many pets as you desire! Experiment with
