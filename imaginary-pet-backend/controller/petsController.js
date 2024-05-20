@@ -24,8 +24,19 @@ export const fetch = async (req, res) => {
     if (pets.length === 0) {
       return res.status(404).json({ message: "Pet Not Found" });
     }
-
     res.status(200).json(pets);
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server error." });
+  }
+};
+
+export const fetchPet = async (req, res) => {
+  try {
+    const pet = await Pet.findById(req.params.id);
+    if (!pet) {
+      return res.status(404).json({ message: "Pet not found" });
+    }
+    res.status(200).json(pet);
   } catch (error) {
     res.status(500).json({ error: "Internal Server error." });
   }
@@ -56,6 +67,6 @@ export const deletePet = async (req, res) => {
     await Pet.findByIdAndDelete(id);
     res.status(201).json({ message: "Pet Deleted Successfully" });
   } catch (error) {
-    res.status(500).json({ error: "Internal Server error." });
+    res.status500().json({ error: "Internal Server error." });
   }
 };

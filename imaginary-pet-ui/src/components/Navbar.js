@@ -28,6 +28,12 @@ function Navbar() {
             Activities
           </Link>
         </li>
+
+        <li>
+          <Link className="main-nav-link" to="/random-background">
+            Backgrounds
+          </Link>
+        </li>
       </ul>
     </nav>
   );

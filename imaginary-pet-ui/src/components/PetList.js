@@ -1,15 +1,13 @@
 import React from "react";
-import Pet from "./Pets";
+import Pet from "./Pet"; // Ensure this path is correct
 
 function PetList({ pets, onDelete, onEdit }) {
   return (
-    <>
-      <div className="container grid grid--3-cols margin-bottom-md">
-        {pets.map((pet, i) => (
-          <Pet pet={pet} key={i} onDelete={onDelete} onEdit={onEdit} />
-        ))}
-      </div>
-    </>
+    <div className="container grid grid--3-cols margin-bottom-md">
+      {pets.map((pet) => (
+        <Pet pet={pet} key={pet._id} onDelete={onDelete} onEdit={onEdit} />
+      ))}
+    </div>
   );
 }
 

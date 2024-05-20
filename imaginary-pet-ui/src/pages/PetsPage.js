@@ -3,9 +3,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { IoMdAddCircle } from "react-icons/io";
 
-import PetList from "../components/PetList";
+import PetList from "../components/PetList"; // Ensure this path is correct
 
-function PetsPage({ setPet }) {
+function PetsPage() {
+  // Removed the unused setPet prop
   const navigate = useNavigate();
   const [pets, setPets] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -41,8 +42,7 @@ function PetsPage({ setPet }) {
   };
 
   const onEditPet = (pet) => {
-    setPet(pet);
-    navigate("/edit", { state: { from: "/pets" } });
+    navigate(`/edit/${pet._id}`, { state: { from: "/pets" } });
   };
 
   const onDeletePet = async (_id) => {
