@@ -3,10 +3,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { IoMdAddCircle } from "react-icons/io";
 
-import PetList from "../components/PetList"; // Ensure this path is correct
+import PetList from "../components/PetList";
 
-function PetsPage() {
-  // Removed the unused setPet prop
+function PetsPage({ setPet }) {
   const navigate = useNavigate();
   const [pets, setPets] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -42,10 +41,18 @@ function PetsPage() {
   };
 
   const onEditPet = (pet) => {
-    navigate(`/edit/${pet._id}`, { state: { from: "/pets" } });
+    setPet(pet);
+    navigate("/edit", { state: { from: "/pets" } });
   };
 
   const onDeletePet = async (_id) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this pet? This action is permanent and cannot be undone."
+    );
+    if (!confirmDelete) {
+      return;
+    }
+
     try {
       const response = await axios.delete(
         `http://localhost:8000/api/pet/delete/${_id}`

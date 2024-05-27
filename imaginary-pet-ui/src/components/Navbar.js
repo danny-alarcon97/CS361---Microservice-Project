@@ -10,28 +10,24 @@ function Navbar() {
             Home
           </Link>
         </li>
-
         <li>
           <Link className="main-nav-link" to="/create">
             Create
           </Link>
         </li>
-
         <li>
           <Link className="main-nav-link" to="/pets">
             Pets
           </Link>
         </li>
-
         <li>
           <Link className="main-nav-link" to="/activities">
             Activities
           </Link>
         </li>
-
         <li>
           <Link className="main-nav-link" to="/random-background">
-            Backgrounds
+            Random Pet Idea
           </Link>
         </li>
       </ul>

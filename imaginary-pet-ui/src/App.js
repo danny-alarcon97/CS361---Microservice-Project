@@ -16,7 +16,6 @@ function App() {
       <header>
         <Navbar />
       </header>
-
       <main>
         <section>
           <Routes>

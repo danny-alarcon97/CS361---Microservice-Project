@@ -1,5 +1,6 @@
 import React from "react";
-import { FaRegEdit, FaTrashAlt } from "react-icons/fa"; // Ensure correct imports
+import { FaRegEdit } from "react-icons/fa";
+import { FaTrashCan } from "react-icons/fa6";
 
 // Capitalize the first letter of a string
 function capitalizeFirstLetter(string) {
@@ -37,12 +38,12 @@ function Pet({ pet, onEdit, onDelete }) {
           </li>
           <li className="meal-attribute">
             <span>
-              <strong>Intelligence:</strong> {pet.intelligence}
+              <strong>intelligence:</strong> {pet.intelligence}
             </span>
           </li>
           <li className="meal-attribute">
             <span>
-              <strong>Stamina:</strong> {pet.stamina}
+              <strong>stamina:</strong> {pet.stamina}
             </span>
           </li>
           <li className="meal-attribute">
@@ -66,7 +67,7 @@ function Pet({ pet, onEdit, onDelete }) {
               title="Edit Item"
               className="meal-icon"
             />
-            <FaTrashAlt
+            <FaTrashCan
               onClick={() => onDelete(pet._id)}
               title="Delete Item"
               className="meal-icon"
