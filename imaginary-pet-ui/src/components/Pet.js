@@ -2,16 +2,15 @@ import React from "react";
 import { FaRegEdit } from "react-icons/fa";
 import { FaTrashCan } from "react-icons/fa6";
 
-// Capitalize the first letter of a string
 function capitalizeFirstLetter(string) {
-  if (!string) return ""; // Return an empty string if input is falsy (e.g., undefined, '')
+  if (!string) return "";
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function Pet({ pet, onEdit, onDelete }) {
   return (
     <div className="meal">
-      <img src="./img/pets/quetzal.jpg" className="meal-img" alt="pet" />
+      <img src={pet.imageUrl} className="meal-img" alt={pet.name} />
       <div className="meal-content">
         <div className="meal-tags">
           <span className={`tag tag--${pet.affinity}`}>
@@ -38,12 +37,12 @@ function Pet({ pet, onEdit, onDelete }) {
           </li>
           <li className="meal-attribute">
             <span>
-              <strong>intelligence:</strong> {pet.intelligence}
+              <strong>Intelligence:</strong> {pet.intelligence}
             </span>
           </li>
           <li className="meal-attribute">
             <span>
-              <strong>stamina:</strong> {pet.stamina}
+              <strong>Stamina:</strong> {pet.stamina}
             </span>
           </li>
           <li className="meal-attribute">

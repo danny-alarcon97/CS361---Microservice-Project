@@ -1,5 +1,5 @@
 import React from "react";
-import Pet from "./Pet"; // Ensure this path is correct
+import Pet from "./Pet";
 
 function PetList({ pets, onDelete, onEdit }) {
   return (
