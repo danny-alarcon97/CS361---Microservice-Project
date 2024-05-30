@@ -88,7 +88,7 @@ export const create = async (req, res) => {
     }
 
     // Fetch image from DALL-E
-    const description = `${name}, ${affinity}, ${appearance}`;
+    const description = `Pet created of ${affinity} element, ${appearance}`;
     const imageUrl = await fetchImageFromDalle(description);
 
     // Save the pet to the database with the image URL
