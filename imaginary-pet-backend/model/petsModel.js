@@ -28,7 +28,7 @@ const petSchema = new mongoose.Schema({
   health: { type: Number, required: true },
   charisma: { type: Number, required: true },
   luck: { type: Number, required: true },
-  imageUrl: { type: String }, // Add this line to include the imageUrl field
+  imageUrl: { type: String }, // line includes the imageUrl field
 });
 
 export default mongoose.model("pets", petSchema);

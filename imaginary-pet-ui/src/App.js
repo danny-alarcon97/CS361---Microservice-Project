@@ -5,29 +5,33 @@ import Home from "./pages/Home";
 import AddPet from "./pages/AddPet";
 import EditPet from "./pages/EditPet";
 import PetsPage from "./pages/PetsPage";
-import RandomBackground from "./components/RandomBackground";
+import RandomBackground from "./RandomBackground";
+import { BackgroundProvider } from "./BackgroundContext";
 import "./App.css";
 import "./Style.css";
 import "./Queries.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <header>
-        <Navbar />
-      </header>
-      <main>
-        <section>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/pets" element={<PetsPage />} />
-            <Route path="/create" element={<AddPet />} />
-            <Route path="/edit/:id" element={<EditPet />} />
-            <Route path="/random-background" element={<RandomBackground />} />
-          </Routes>
-        </section>
-      </main>
-    </BrowserRouter>
+    <BackgroundProvider>
+      <BrowserRouter>
+        <header>
+          <Navbar />
+        </header>
+
+        <main>
+          <section>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/pets" element={<PetsPage />} />
+              <Route path="/create" element={<AddPet />} />
+              <Route path="/edit/:id" element={<EditPet />} />
+              <Route path="/random-background" element={<RandomBackground />} />
+            </Routes>
+          </section>
+        </main>
+      </BrowserRouter>
+    </BackgroundProvider>
   );
 }
 

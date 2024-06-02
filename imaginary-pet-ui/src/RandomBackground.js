@@ -1,55 +1,15 @@
-import React, { useEffect, useState, useCallback } from "react";
-import axios from "axios";
+import React, { useEffect, useContext } from "react";
+import { useBackground } from "./BackgroundContext";
 
 function RandomBackground() {
-  const [backgroundUrl, setBackgroundUrl] = useState("");
-  const [imageData, setImageData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  const fetchBackground = useCallback(async () => {
-    try {
-      const response = await axios.get(
-        "http://localhost:7000/api/backgrounds/random"
-      );
-      setBackgroundUrl(response.data.background);
-    } catch (error) {
-      console.error("Error fetching random background:", error);
-      setError("Error fetching random background");
-      setLoading(false);
-    }
-  }, []);
-
-  const generateImage = useCallback(async () => {
-    try {
-      const response = await axios.post(
-        "http://localhost:2024/generateRandomPet",
-        {},
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      setImageData(response.data);
-    } catch (err) {
-      console.error("Error generating image:", err);
-      setError("Error generating image");
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  const fetchData = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    await fetchBackground();
-    await generateImage();
-  }, [fetchBackground, generateImage]);
+  const { backgroundUrl, imageData, randomName, loading, error, fetchData } =
+    useBackground();
 
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    if (!backgroundUrl && !imageData && !randomName) {
+      fetchData();
+    }
+  }, [backgroundUrl, imageData, randomName, fetchData]);
 
   const handleRefresh = () => {
     fetchData();
@@ -83,9 +43,10 @@ function RandomBackground() {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <h3 style={{ color: "red", textAlign: "center" }}>
+          <h3 style={{ color: "red", textAlign: "center" }}>{randomName}</h3>
+          <h4 style={{ color: "white", textAlign: "center" }}>
             {imageData.entity_type}
-          </h3>
+          </h4>
           <img
             src={`http://localhost:2024/images/${imageData.image_path}`}
             alt="Random Pet"
