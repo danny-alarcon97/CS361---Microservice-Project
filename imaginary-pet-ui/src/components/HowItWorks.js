@@ -18,9 +18,7 @@ function HowItWorks() {
           <p class="step-number" style={{ color: "firebrick" }}>
             01 <GiSmallFire />
           </p>
-          <h3 class="heading-tertiary">
-            Create A Pet <strong>(IN PROGRESS!)</strong>
-          </h3>
+          <h3 class="heading-tertiary">Create A Pet</h3>
           <p className="step-description">
             Create a pet in the{" "}
             <strong>
@@ -48,12 +46,10 @@ function HowItWorks() {
           <p class="step-number" style={{ color: "royalblue" }}>
             02 <GiWaterSplash />
           </p>
-          <h3 class="heading-tertiary">
-            Get Those Stats <strong>(IN PROGRESS!)</strong>
-          </h3>
+          <h3 class="heading-tertiary">Choose Those Stats</h3>
           <p class="step-description">
-            Once your pet has been created, random stats will be granted to
-            them. These stats include:{" "}
+            Once you have decided on your pets basic design, select what stats
+            you would like them to have!
             <ul>
               <li>
                 <strong>Strength:</strong> Represents the physical power of the
@@ -86,20 +82,9 @@ function HowItWorks() {
                 NPCs and gain allies or followers.
               </li>
               <li>
-                <strong>Elemental Affinity:</strong> Represents the pet's
-                affinity towards a particular element (e.g., fire, water, air,
-                earth), affecting its abilities and strengths in elemental-based
-                attacks or environments.
-              </li>
-              <li>
                 <strong>Luck:</strong> Reflects the pet's fortune and chance of
                 success in various endeavors, influencing random events or
                 outcomes in the game.
-              </li>
-              <li>
-                <strong>Special Abilities:</strong> Include unique abilities or
-                powers that are specific to certain types of pets or species,
-                adding diversity and strategic depth to the gameplay.
               </li>
             </ul>
           </p>
@@ -110,18 +95,16 @@ function HowItWorks() {
           <p class="step-number" style={{ color: "forestgreen" }}>
             03 <GiWhirlwind />
           </p>
-          <h3 class="heading-tertiary">
-            Put Them To The Test Or Just Care For Them!{" "}
-            <strong>(IN PROGRESS!)</strong>
-          </h3>
+          <h3 class="heading-tertiary">Submit Your Idea</h3>
           <p class="step-description">
-            Test your pet's abilities by engaging in various challenges and
-            activities. You can also take care of your pet by feeding or playing
-            with it. Click on the{" "}
+            Once pet stat creation is complete, submit your pet to be created!
+            The software will send the description you wrote for your pet to an
+            AI for it to create your best friend! Wait a few seconds after
+            submitting, and then navigate to the{" "}
             <strong>
-              <a href="/activities">ACTIVITIES</a>
+              <a href="/pets">PETS</a>
             </strong>{" "}
-            tab or the word to explore available activities.
+            page to see your creation.
           </p>
         </div>
 
@@ -138,7 +121,12 @@ function HowItWorks() {
             Have fun creating as many pets as you desire! Experiment with
             different combinations in the pet creator to unleash your
             creativity. The pets are generated using an AI image generator,
-            offering endless possibilities!
+            offering endless possibilities! If you are having trouble imaging a
+            new friend, feel free to go to the{" "}
+            <strong>
+              <a href="/random-background">RANDOM PET IDEA</a>
+            </strong>{" "}
+            link to give you the next idea for your pet!
           </p>
         </div>
       </div>

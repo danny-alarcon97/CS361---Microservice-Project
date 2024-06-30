@@ -1,5 +1,6 @@
-import React, { useEffect, useContext } from "react";
-import { useBackground } from "./BackgroundContext";
+// import React, { useEffect, useContext } from "react";
+import React, { useEffect } from "react";
+import { useBackground } from "../components/BackgroundContext";
 
 function RandomBackground() {
   const { backgroundUrl, imageData, randomName, loading, error, fetchData } =
@@ -43,10 +44,12 @@ function RandomBackground() {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <h3 style={{ color: "red", textAlign: "center" }}>{randomName}</h3>
-          <h4 style={{ color: "white", textAlign: "center" }}>
-            {imageData.entity_type}
-          </h4>
+          <h1 style={{ color: "black", textAlign: "center", fontsize: "36px" }}>
+            {randomName}
+          </h1>
+          <h2 style={{ color: "red", textAlign: "center", fontsize: "28px" }}>
+            ({imageData.entity_type})
+          </h2>
           <img
             src={`http://localhost:2024/images/${imageData.image_path}`}
             alt="Random Pet"
@@ -74,7 +77,7 @@ function RandomBackground() {
           borderRadius: "5px",
         }}
       >
-        Refresh Page
+        New Pet
       </button>
     </div>
   );

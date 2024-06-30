@@ -27,6 +27,9 @@ const names = [
   "Sophie",
   "Chloe",
   "Maggie",
+  "Chloe",
+  "Daniel",
+  "Dexter",
 ];
 
 app.get("/generateRandomName", (req, res) => {
